@@ -1,0 +1,65 @@
+[package]
+name = "cssbox_rust"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+authors = ["CSSBox Rust Implementation"]
+description = "HTML/CSS rendering engine - Rust implementation of CSSBox"
+license = "LGPL-3.0"
+
+[dependencies]
+# HTML/XML parsing
+html5ever = "0.27"
+markup5ever = "0.12"
+scraper = "0.20"
+
+# CSS parsing and processing
+lightningcss = "1.0.0-alpha.68"
+cssparser = "0.33"
+
+# DOM manipulation
+kuchiki = "0.8"
+
+# Image handling
+# Note: Using 0.24 to avoid moxcms dependency which requires edition 2024
+# For Rust < 1.81, use image 0.24.x to avoid compatibility issues
+image = "0.24"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Graphics and rendering (using Skia bindings or Cairo)
+# NOTE: Java AWT has no direct equivalent in Rust
+# We'll use skia-safe for 2D graphics rendering
+# ⚠️ LIMITATION: This requires platform-specific dependencies
+skia-safe = { version = "0.90", optional = true }
+
+# Font handling
+# ⚠️ LIMITATION: Java's font handling is more integrated with OS
+# Note: font-kit requires system libraries (fontconfig on Linux)
+font-kit = { version = "0.14", optional = true }
+pathfinder_geometry = { version = "0.5", optional = true }
+
+# URL and HTTP handling
+url = "2.5"
+reqwest = { version = "0.12", features = ["blocking"] }
+
+# Utilities
+lazy_static = "1.4"
+
+[dev-dependencies]
+criterion = "0.5"
+
+[features]
+default = []
+graphics = ["skia-safe", "font-kit", "pathfinder_geometry"]
+fonts = ["font-kit", "pathfinder_geometry"]
+
+[[example]]
+name = "render_html"
+path = "examples/render_html.rs"
