@@ -265,6 +265,5 @@ CSSBox 项目采用 GNU Lesser General Public License (LGPL) v3 许可。
 ---
 
 **文档版本**: 1.0  
-**最后更新**: 2025-10-30  
-**CSSBox 版本**: 5.0.3-SNAPSHOT  
-**文档作者**: GitHub Copilot Agent
+**最后更新**: 2024-10-30  
+**CSSBox 版本**: 5.0.3-SNAPSHOT

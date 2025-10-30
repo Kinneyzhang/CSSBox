@@ -195,9 +195,8 @@ CSSBox is licensed under GNU Lesser General Public License (LGPL) v3.
 ## Documentation Version
 
 - **Version**: 1.0
-- **Date**: 2025-10-30
+- **Date**: 2024-10-30
 - **CSSBox Version**: 5.0.3-SNAPSHOT
-- **Author**: GitHub Copilot Agent
 - **Language**: Chinese (中文)
 
 ---
