@@ -72,6 +72,16 @@ Add to your `Cargo.toml`:
 cssbox_rust = "0.1.0"
 ```
 
+### Requirements
+
+- **Minimum Rust version**: 1.70 or higher
+- **Recommended**: Rust 1.75+ for better compatibility
+
+If you encounter build errors with older Rust versions, please update:
+```bash
+rustup update stable
+```
+
 ### Building
 
 ```bash

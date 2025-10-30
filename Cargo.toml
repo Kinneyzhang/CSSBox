@@ -2,6 +2,7 @@
 name = "cssbox_rust"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.70"
 authors = ["CSSBox Rust Implementation"]
 description = "HTML/CSS rendering engine - Rust implementation of CSSBox"
 license = "LGPL-3.0"
@@ -20,7 +21,9 @@ cssparser = "0.33"
 kuchiki = "0.8"
 
 # Image handling
-image = "0.25"
+# Note: Using 0.24 to avoid moxcms dependency which requires edition 2024
+# For Rust < 1.81, use image 0.24.x to avoid compatibility issues
+image = "0.24"
 
 # Logging
 log = "0.4"

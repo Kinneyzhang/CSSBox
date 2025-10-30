@@ -359,6 +359,16 @@ fn load_from_string() -> Result<(), Box<dyn std::error::Error>> {
 
 ## 编译和运行
 
+### 系统要求
+
+- **最低 Rust 版本**: 1.70 或更高
+- **推荐版本**: Rust 1.75+ 以获得更好的兼容性
+
+如果遇到旧版本 Rust 的编译错误，请更新：
+```bash
+rustup update stable
+```
+
 ### 基本编译
 
 ```bash
